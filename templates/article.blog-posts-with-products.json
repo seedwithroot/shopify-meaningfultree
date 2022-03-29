@@ -1,0 +1,76 @@
+{
+  "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "show_article_image": true,
+        "show_date": false,
+        "show_category": false,
+        "show_author": false,
+        "show_share_buttons": true,
+        "show_prev_next": true
+      }
+    },
+    "shop-now": {
+      "type": "shop-now",
+      "blocks": {
+        "quote": {
+          "type": "quote",
+          "settings": {
+            "content": "<p>Healthy for them. Simple for you.<\/p>",
+            "author": ""
+          }
+        }
+      },
+      "block_order": [
+        "quote"
+      ],
+      "settings": {
+        "title": "Shop now",
+        "collection": "frontpage",
+        "grid_items_count": 3,
+        "show_product_info": true,
+        "show_vendor": true,
+        "show_color_swatch": false
+      }
+    },
+    "16485854300f6c94e8": {
+      "type": "featured-collections",
+      "disabled": true,
+      "blocks": {
+        "16485854300c80842a-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "grid_items_count": 8,
+            "button_text": "View all products"
+          }
+        }
+      },
+      "block_order": [
+        "16485854300c80842a-0"
+      ],
+      "settings": {
+        "title": "Featured collection",
+        "layout_mode": "grid",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false,
+        "grid_mobile_items_per_row": "2",
+        "grid_desktop_items_per_row": 4
+      }
+    }
+  },
+  "order": [
+    "shogun-helper",
+    "main",
+    "shop-now",
+    "16485854300f6c94e8"
+  ]
+}
