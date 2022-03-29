@@ -1,0 +1,91 @@
+<style>
+  .parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+.box {
+    flex: 0 1 180px;
+    margin: 25px 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+  .box img {
+    max-height: 118px !important;
+}
+    @media(max-width:650px){
+    
+.box {
+    flex: 0 1 160px;
+}
+  }
+  @media(max-width:450px){
+    
+.box {
+    flex: 0 1 130px;
+}
+  }
+</style>
+<section class="Section Section--spacingNormal" id="section-{{ section.id }}">
+  <div class="Container">   
+    {%- if section.settings.title != blank -%}
+      <header class="SectionHeader SectionHeader--center">
+
+        {%- if section.settings.title != blank -%}
+          <h2 class="SectionHeader__Heading Heading u-h1">{{ section.settings.title | escape }}</h2>
+        {%- endif -%}
+      </header>
+    {%- endif -%}
+
+    <div class="parent">
+      <div class="box">
+        <img src="{{ 'Asset_2.png' | asset_url }}">
+      </div>
+      <div class="box">
+        <img src="{{ 'Asset_3.png' | asset_url }}">
+      </div>
+      <div class="box">
+        <img src="{{ 'Asset_4.png' | asset_url }}">
+      </div>
+      <div class="box">
+        <img src="{{ 'Asset_5.png' | asset_url }}">
+      </div>
+      <div class="box">
+        <img src="{{ 'Asset_6.png' | asset_url }}">
+      </div>
+      <div class="box">
+        <img src="{{ 'asset_7.png' | asset_url }}">
+      </div>
+    </div>
+
+  </div>
+</section>
+    
+{% schema %}
+  {
+    "name": "Health Benefits",
+    "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Image",
+      "name": "Health Benefits",
+      "settings": {}
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
