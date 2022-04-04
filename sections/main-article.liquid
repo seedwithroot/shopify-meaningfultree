@@ -73,7 +73,14 @@
       </header>
 
       <div class="Article__Body Rte">
-        {{ article.content }}
+
+        {% assign splitContent = article.content | split:'<!--P-->' %}
+        {% for contentPart in splitContent %}
+        {{contentPart}}
+        <p>INSERT AD HERE</p>
+        {% endfor %}
+
+        <!-- {{ article.content }} -->
       </div>
 
       {%- capture article_footer -%}
