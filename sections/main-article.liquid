@@ -72,20 +72,26 @@
         <h1 class="Article__Title Heading u-h1">{{ article.title }}</h1>
       </header>
 
-      <!-- <div class="Article__Body Rte"> -->
+      <div class="Article__Body Rte">
+        {% for c in collections.all.products %}
+        {% case p.id %}
+        {% when 6978645885099 %}
+
+        {% assign product = p %}
+        {% endcase %}
+        {% endfor %}
 
         {% assign splitContent = article.content | split:'<!--P-->' %}
         {% for contentPart in splitContent %}
-        <div class="Article__Body Rte">
-        {{contentPart}}
-      </div>
-      {% render 'shop-now' %}
+          {{contentPart}}
 
-      
+
+          {% render 'product-insert', use_horizontal:true,product=p %}
+
         {% endfor %}
 
 
-      <!-- </div> -->
+      </div>
 
       {%- capture article_footer -%}
         {%- if section.settings.show_author -%}
