@@ -80,6 +80,7 @@
         {% assign product = p %}
         {% endcase %}
         {% endfor %}
+        {{ product.name }}
         
 
         {% assign splitContent = article.content | split: '<!--P-->' %}
