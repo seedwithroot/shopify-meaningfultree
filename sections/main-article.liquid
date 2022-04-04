@@ -79,59 +79,9 @@
         <div class="Article__Body Rte">
         {{contentPart}}
       </div>
+      {% render 'shop-now' %}
 
-        {% for c in collections %}
-        {% case c.id %}
-        {% when 273396269227 %}
-
-        {% assign collection = c %}
-        {% endcase %}
-        {% endfor %}
-
-        <div class="Container Container--narrow">
-          {%- capture product_panel -%}
-            <div class="Panel Panel--flush Panel--withArrows">
-
-
-              <div class="Panel__Content">
-
-                <div class="ProductList ProductList--shopNow" data-desktop-count="2" data-flickity-config='{{ flickity_config }}'>
-                  {%- if collection != blank -%}
-                    {%- for product in collection.products limit: 4 -%}
-                      <div class="Carousel__Cell">
-                        {%- render 'product-item', product: product, show_product_info: true, show_vendor: false, show_color_swatch: false, show_labels: false -%}
-                      </div>
-                    {%- endfor -%}
-                  {%- else -%}
-                    {%- for i in (1..4) -%}
-                      <div class="Carousel__Cell">
-                        {%- render 'product-item-placeholder', placeholder_index: i -%}
-                      </div>
-                    {%- endfor -%}
-                  {%- endif -%}
-                </div>
-              </div>
-            </div>
-          {%- endcapture -%}
-
-
-            <div class="ShopNowGrid Grid Grid--m">
-              <div class="Grid__Cell 2/3--lap-and-up">
-                {{ product_panel }}
-              </div>
-
-              <div class="Grid__Cell 1/3--lap-and-up">
-                <div class="FeaturedQuote">
-
-                    <div class="FeaturedQuote__Content">
-                      <p>You can use this element to add a quote, content...</p>
-                    </div>
-
-                </div>
-              </div>
-            </div>
-
-        </div>
+      
         {% endfor %}
 
 
