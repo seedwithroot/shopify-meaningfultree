@@ -21,7 +21,7 @@
         {%- case block.type -%}
           {%- when 'article' -%}
             {%- for i in (1..3) -%}
-              {%- assign article_option = 'article_' | append: i -%}
+              
               {%- assign article = articles[block.settings[article_option]] -%}
 
               {%- unless article == empty -%}
@@ -157,7 +157,8 @@
     {
       "category": "Blog",
       "name": "Blog posts",
-      "settings": {},
+      "settings": {
+      },
       "blocks": [
         {
           "type": "blog",

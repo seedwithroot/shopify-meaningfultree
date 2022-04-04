@@ -18,7 +18,7 @@
     <link rel="canonical" href="{{ canonical_url }}">
 
     {%- if settings.favicon -%}
-      <link rel="shortcut icon" href="{{ settings.favicon | img_url: '96x' }}" type="image/png">
+      <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 96 }}" type="image/png">
     {%- endif -%}
 
     {% render 'social-meta-tags' %}

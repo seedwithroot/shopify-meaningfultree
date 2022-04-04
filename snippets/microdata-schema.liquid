@@ -28,7 +28,7 @@ or change the format of some info
           "availability": {%- if variant.available -%}"https://schema.org/InStock"{%- else -%}"https://schema.org/OutOfStock"{%- endif -%},
           "price": {{ variant.price | divided_by: 100.0 | json }},
           "priceCurrency": {{ cart.currency.iso_code | json }},
-          "priceValidUntil": "{{ 'now' | date: '%s' | plus: days_product_price_valid_until | date: '%Y-%m-%d'}}",
+          "priceValidUntil": "{{ 'now' | date: '%s' | plus: days_product_price_valid_until | date: '%Y-%m-%d' }}",
           {%- if variant.sku != blank -%}
             "sku": {{ variant.sku | json }},
           {%- endif -%}
@@ -37,7 +37,7 @@ or change the format of some info
       {%- endfor -%}
     ],
     {%- if is_barcode_available and is_valid_gtin_length %}
-      "{{gtin_option}}": {{ product.selected_or_first_available_variant.barcode | json }},
+      "{{ gtin_option }}": {{ product.selected_or_first_available_variant.barcode | json }},
       "productId": {{ product.selected_or_first_available_variant.barcode | json }},
     {%- elsif is_barcode_available %}
       "mpn": {{ product.selected_or_first_available_variant.barcode | json }},
@@ -53,8 +53,8 @@ or change the format of some info
     "sku": {{ product.selected_or_first_available_variant.sku | json }},
     "image": {
       "@type": "ImageObject",
-      "url": "https:{{ product.featured_media | img_url: '1024x' }}",
-      "image": "https:{{ product.featured_media | img_url: '1024x' }}",
+      "url": "https:{{ product.featured_media | image_url: width: 1024 }}",
+      "image": "https:{{ product.featured_media | image_url: width: 1024 }}",
       "name": {{ product.featured_media.alt | json }},
       "width": "1024",
       "height": "1024"
@@ -73,8 +73,8 @@ or change the format of some info
     "dateModified": "{{ article.published_at | date: '%Y-%m-%dT%T' }}",
     "image": {
       "@type": "ImageObject",
-      "url": "https:{{ article.image | img_url: '1024x' }}",
-      "image": "https:{{ article.image | img_url: '1024x' }}",
+      "url": "https:{{ article.image | image_url: width: 1024 }}",
+      "image": "https:{{ article.image | image_url: width: 1024 }}",
       "name": {{ article.image.alt | json }},
       "width": "1024",
       "height": "1024"

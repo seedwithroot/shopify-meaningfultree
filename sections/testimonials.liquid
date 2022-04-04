@@ -29,7 +29,7 @@
           {%- endif -%}
 
           {%- if block.settings.logo != blank -%}
-            <img class="Testimonial__Logo hidden-lap-and-up" src="{{ block.settings.logo | img_url: '300x' }}" alt="{{ block.settings.logo.alt | escape }}">
+            <img class="Testimonial__Logo hidden-lap-and-up" src="{{ block.settings.logo | image_url: width: 300 }}" alt="{{ block.settings.logo.alt | escape }}">
           {%- endif -%}
         </div>
       </div>
@@ -40,7 +40,7 @@
     <div class="TestimonialNav hidden-pocket">
       {%- for block in section.blocks -%}
         {%- if block.settings.logo != blank -%}
-          <img class="TestimonialNav__Item {% if forloop.first %}is-selected{% endif %}" src="{{ block.settings.logo | img_url: '300x' }}" alt="{{ block.settings.logo.alt | escape }}" data-index="{{ forloop.index0 }}">
+          <img class="TestimonialNav__Item {% if forloop.first %}is-selected{% endif %}" src="{{ block.settings.logo | image_url: width: 300 }}" alt="{{ block.settings.logo.alt | escape }}" data-index="{{ forloop.index0 }}">
         {%- endif -%}
       {%- endfor -%}
     </div>
@@ -54,7 +54,7 @@
   }
 
   #section-{{ section.id }} .flickity-page-dots .dot:not(.is-selected) {
-    border-color: {{section.settings.background | color_mix: section.settings.text_color, 85}};
+    border-color: {{ section.settings.background | color_mix: section.settings.text_color, 85 }};
   }
 </style>
 
@@ -118,19 +118,23 @@
     {
       "category": "Text",
       "name": "Testimonials",
-      "settings": {},
+      "settings": {
+      },
       "blocks": [
         {
           "type": "testimonial",
-          "settings": {}
+          "settings": {
+          }
         },
         {
           "type": "testimonial",
-          "settings": {}
+          "settings": {
+          }
         },
         {
           "type": "testimonial",
-          "settings": {}
+          "settings": {
+          }
         }
       ]
     }

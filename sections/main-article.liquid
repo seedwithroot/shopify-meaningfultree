@@ -1,7 +1,7 @@
 {%- assign share_url = shop.url | append: article.url -%}
 {%- assign twitter_text = article.title -%}
 {%- assign pinterest_description = article.description | strip_html | truncatewords: 15 | url_param_escape -%}
-{%- assign pinterest_image = article.image | img_url: '750x' | prepend: 'https:' -%}
+{%- assign pinterest_image = article.image | image_url: width: 750 | prepend: 'https:' -%}
 
 <article class="Article" data-section-id="{{ section.id }}" data-section-type="article">
   <aside class="ArticleToolbar hidden-phone">
@@ -42,10 +42,10 @@
   </aside>
 
   {%- if article.image and section.settings.show_article_image -%}
-    <div class="Article__ImageWrapper" style="background-image: url({{ article.image | img_url: '1x1' }})">
+    <div class="Article__ImageWrapper" style="background-image: url({{ article.image | image_url: width: 1, height: 1 }})">
       <div class="Article__Image Image--lazyLoad Image--fadeIn"
            data-optimumx="1.4"
-           data-bgset="{{ article.image | img_url: '400x' }} 400w, {{ article.image | img_url: '600x' }} 600w, {{ article.image | img_url: '800x' }} 800w, {{ article.image | img_url: '1200x' }} 1200w, {{ article.image | img_url: '1400x' }} 1400w, {{ article.image | img_url: '1600x' }} 1600w">
+           data-bgset="{{ article.image | image_url: width: 400 }} 400w, {{ article.image | image_url: width: 600 }} 600w, {{ article.image | image_url: width: 800 }} 800w, {{ article.image | image_url: width: 1200 }} 1200w, {{ article.image | image_url: width: 1400 }} 1400w, {{ article.image | image_url: width: 1600 }} 1600w">
       </div>
     </div>
   {%- endif -%}
@@ -77,16 +77,16 @@
         {% case p.id %}
         {% when 6978645885099 %}
 
-        {% assign product = p %}
+        
         {% endcase %}
         {% endfor %}
 
-        {% assign splitContent = article.content | split:'<!--P-->' %}
+        {% assign splitContent = article.content | split: '<!--P-->' %}
         {% for contentPart in splitContent %}
-          {{contentPart}}
+          {{ contentPart }}
 
 
-          {% render 'product-insert', use_horizontal:true,product=p %}
+          {% render 'product-insert', use_horizontal: true, product=p %}
 
         {% endfor %}
 

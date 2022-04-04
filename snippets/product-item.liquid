@@ -35,20 +35,20 @@
         {%- if has_alternate_image -%}
           {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: product.media[1] -%}{%- endcapture -%}
 
-          {%- assign image_url = product.media[1] | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+          {%- assign image_url = product.media[1] | image_url: width: 1, height: 1 | replace: '_1x1.', '_{width}x.' -%}
 
           <img class="ProductItem__Image ProductItem__Image--alternate Image--lazyLoad Image--fadeIn" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ product.media[1].alt | escape }}" data-media-id="{{ product.media[1].id }}">
         {%- endif -%}
 
         {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,400,600,700,800,900,1000,1200', image: product.featured_media -%}{%- endcapture -%}
-        {%- assign image_url = product.featured_media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        {%- assign image_url = product.featured_media | image_url: width: 1, height: 1 | replace: '_1x1.', '_{width}x.' -%}
 
         <img class="ProductItem__Image Image--lazyLoad Image--fadeIn" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ product.featured_media.alt | escape }}" data-media-id="{{ product.featured_media.id }}">
         <span class="Image__Loader"></span>
 
         <noscript>
-          <img class="ProductItem__Image ProductItem__Image--alternate" src="{{ product.media[1] | img_url: '600x' }}" alt="{{ product.media[1].alt | escape }}">
-          <img class="ProductItem__Image" src="{{ product.featured_media| img_url: '600x' }}" alt="{{ product.featured_media.alt | escape }}">
+          <img class="ProductItem__Image ProductItem__Image--alternate" src="{{ product.media[1] | image_url: width: 600 }}" alt="{{ product.media[1].alt | escape }}">
+          <img class="ProductItem__Image" src="{{ product.featured_media | image_url: width: 600 }}" alt="{{ product.featured_media.alt | escape }}">
         </noscript>
       </div>
     </a>
@@ -116,7 +116,7 @@
                   <div class="ProductItem__ColorSwatchItem">
                     {%- if variant_for_value.image -%}
                       {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,400,600,700,800,900,1000,1200', image: variant_for_value.image -%}{%- endcapture -%}
-                      {%- assign variant_image_url = variant_for_value.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                      {%- assign variant_image_url = variant_for_value.image | image_url: width: 1, height: 1 | replace: '_1x1.', '_{width}x.' -%}
                     {%- endif -%}
 
                     <input class="ColorSwatch__Radio" type="radio" name="{{ color_name }}" id="{{ color_id }}" value="{{ value | escape }}" {% if option.selected_value == value %}checked="checked"{% endif %} data-variant-url="{{ variant_for_value.url }}{% if variant_for_value.image %}#Image{{ variant_for_value.image.id }}{% endif %}" {% if variant_for_value.image %}data-image-id="{{ variant_for_value.image.id }}" data-image-url="{{ variant_image_url }}" data-image-widths="[{{ supported_sizes }}]" data-image-aspect-ratio="{{ variant_for_value.image.aspect_ratio }}"{% endif %} aria-hidden="true">

@@ -62,7 +62,7 @@
           {%- assign item_count = block.settings.grid_items_count -%}
 
           {%- if collection.products_count < block.settings.grid_items_count -%}
-            {%- assign item_count = collection.products_count -%}
+            
           {%- endif -%}
 
           {%- if section.settings.layout_mode == 'grid' -%}
@@ -237,7 +237,8 @@
     {
       "category": "Collection",
       "name": "Featured collections",
-      "settings": {},
+      "settings": {
+      },
       "blocks": [
         {
           "type": "collection"

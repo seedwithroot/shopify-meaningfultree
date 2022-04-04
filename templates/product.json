@@ -1,1 +1,138 @@
-{"sections":{"main":{"type":"main-product","blocks":{"product_meta":{"type":"product_meta","settings":{"show_vendor":true,"show_sku":false,"show_taxes_included":false}},"share_buttons":{"type":"share_buttons","settings":{}},"variant_selector":{"type":"variant_selector","settings":{"selector_mode":"dropdown","show_color_swatch":false,"show_color_carousel":false,"size_chart":""}},"quantity_selector":{"type":"quantity_selector","settings":{"show_label":false}},"buy_buttons":{"type":"buy_buttons","settings":{"show_price_in_button":false,"show_payment_button":true}},"e9af1600-587a-45e2-a1b2-3000da021019":{"type":"description","settings":{}},"f53a0271-b2b9-4369-af61-7dfcb8e7a234":{"type":"icons","disabled":true,"settings":{"title":"MEANINGFUL HEALTH BENEFITS"}}},"block_order":["product_meta","share_buttons","variant_selector","quantity_selector","buy_buttons","e9af1600-587a-45e2-a1b2-3000da021019","f53a0271-b2b9-4369-af61-7dfcb8e7a234"],"settings":{"image_size":"large","stack_images":true,"show_thumbnails":true,"enable_image_zoom":true,"enable_video_looping":false}},"product-recommendations":{"type":"product-recommendations","blocks":{"efc38ac8-c580-47f6-b70c-2048643c750b":{"type":"product","settings":{"product":""}}},"block_order":["efc38ac8-c580-47f6-b70c-2048643c750b"],"settings":{"heading":"You may also like","show_product_info":true,"show_vendor":false,"show_color_swatch":false}},"recently-viewed-products":{"type":"recently-viewed-products","settings":{"title":"Recently viewed","show_product_info":true,"show_vendor":false,"show_color_swatch":false}},"1634241168bb821f94":{"type":"instafeed","settings":{"heading_font":"helvetica_n4","heading_size":20,"feed_width":100,"html_area":""}},"16342410832d845f02":{"type":"blog-posts","blocks":{"16342410832d845f02-0":{"type":"blog","settings":{"blog":"blog"}}},"block_order":["16342410832d845f02-0"],"settings":{"subheading":"GET THE SCOOP","title":"PUP TALK","show_category":false,"button_link":"shopify:\/\/blogs\/blog","button_text":"View all articles"}}},"order":["main","product-recommendations","recently-viewed-products","1634241168bb821f94","16342410832d845f02"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "product_meta": {
+          "type": "product_meta",
+          "settings": {
+            "show_vendor": true,
+            "show_sku": false,
+            "show_taxes_included": false
+          }
+        },
+        "share_buttons": {
+          "type": "share_buttons",
+          "settings": {
+          }
+        },
+        "variant_selector": {
+          "type": "variant_selector",
+          "settings": {
+            "selector_mode": "dropdown",
+            "show_color_swatch": false,
+            "show_color_carousel": false,
+            "size_chart": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+            "show_label": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_price_in_button": false,
+            "show_payment_button": true
+          }
+        },
+        "e9af1600-587a-45e2-a1b2-3000da021019": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "f53a0271-b2b9-4369-af61-7dfcb8e7a234": {
+          "type": "icons",
+          "disabled": true,
+          "settings": {
+            "title": "MEANINGFUL HEALTH BENEFITS"
+          }
+        }
+      },
+      "block_order": [
+        "product_meta",
+        "share_buttons",
+        "variant_selector",
+        "quantity_selector",
+        "buy_buttons",
+        "e9af1600-587a-45e2-a1b2-3000da021019",
+        "f53a0271-b2b9-4369-af61-7dfcb8e7a234"
+      ],
+      "settings": {
+        "image_size": "large",
+        "stack_images": true,
+        "show_thumbnails": true,
+        "enable_image_zoom": true,
+        "enable_video_looping": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "blocks": {
+        "efc38ac8-c580-47f6-b70c-2048643c750b": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "efc38ac8-c580-47f6-b70c-2048643c750b"
+      ],
+      "settings": {
+        "heading": "You may also like",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "title": "Recently viewed",
+        "show_product_info": true,
+        "show_vendor": false,
+        "show_color_swatch": false
+      }
+    },
+    "1634241168bb821f94": {
+      "type": "instafeed",
+      "settings": {
+        "heading_font": "helvetica_n4",
+        "heading_size": 20,
+        "feed_width": 100,
+        "html_area": ""
+      }
+    },
+    "16342410832d845f02": {
+      "type": "blog-posts",
+      "blocks": {
+        "16342410832d845f02-0": {
+          "type": "blog",
+          "settings": {
+            "blog": "blog"
+          }
+        }
+      },
+      "block_order": [
+        "16342410832d845f02-0"
+      ],
+      "settings": {
+        "subheading": "GET THE SCOOP",
+        "title": "PUP TALK",
+        "show_category": false,
+        "button_link": "shopify://blogs/blog",
+        "button_text": "View all articles"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "recently-viewed-products",
+    "1634241168bb821f94",
+    "16342410832d845f02"
+  ]
+}

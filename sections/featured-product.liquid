@@ -46,13 +46,13 @@
 
             {%- assign media_aspect_ratio = product.featured_media.aspect_ratio | default: product.featured_media.preview_image.aspect_ratio -%}
             <div class="AspectRatio" style="max-width: {{ product.featured_media.preview_image.width }}px; --aspect-ratio: {{ media_aspect_ratio }}">
-              {% assign image_url = product.featured_media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+              {% assign image_url = product.featured_media | image_url: width: 1, height: 1 | replace: '_1x1.', '_{width}x.' %}
 
               <img class="Image--lazyLoad Image--fadeIn" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ product.featured_media.alt | escape }}">
               <span class="Image__Loader"></span>
 
               <noscript>
-                <img src="{{ product.featured_media | img_url: '600x' }}" alt="{{ product.featured_media.alt | escape }}">
+                <img src="{{ product.featured_media | image_url: width: 600 }}" alt="{{ product.featured_media.alt | escape }}">
               </noscript>
             </div>
           </a>
@@ -88,7 +88,7 @@
                     {%- assign share_url = shop.url | append: product.url -%}
                     {%- assign twitter_text = product.title -%}
                     {%- assign pinterest_description = product.description | strip_html | truncatewords: 15 | url_param_escape -%}
-                    {%- assign pinterest_image = product.featured_image | img_url: 'large' | prepend: 'https:' -%}
+                    {%- assign pinterest_image = product.featured_image | image_url | prepend: 'https:' -%}
 
                     <div class="ProductMeta__ShareList Text--subdued">
                       <a class="ProductMeta__ShareItem" href="https://www.facebook.com/sharer.php?u={{ share_url }}" target="_blank" rel="noopener" aria-label="Facebook">{%- render 'icon' with 'facebook' -%}</a>
@@ -239,7 +239,7 @@
                     {%- endif -%}
 
                     <div class="QuantitySelector QuantitySelector--large">
-                      {%- assign quantity_minus_one = line_item.quantity | minus: 1 -%}
+                      
 
                       <button type="button" class="QuantitySelector__Button Link Link--secondary" data-action="decrease-quantity">{% render 'icon' with 'minus' %}</button>
                       <input type="text" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" name="quantity" value="1" aria-label="{{ 'product.form.quantity' | t }}">
@@ -472,19 +472,23 @@
       "blocks": [
         {
           "type": "product_meta",
-          "settings": {}
+          "settings": {
+          }
         },
         {
           "type": "share_buttons",
-          "settings": {}
+          "settings": {
+          }
         },
         {
           "type": "variant_selector",
-          "settings": {}
+          "settings": {
+          }
         },
         {
           "type": "buy_buttons",
-          "settings": {}
+          "settings": {
+          }
         }
       ]
     }

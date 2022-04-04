@@ -58,7 +58,7 @@
           {%- assign share_url = shop.url | append: product.url -%}
           {%- assign twitter_text = product.title -%}
           {%- assign pinterest_description = product.description | strip_html | truncatewords: 15 | url_param_escape -%}
-          {%- assign pinterest_image = product.featured_media | img_url: '1024x' | prepend: 'https:' -%}
+          {%- assign pinterest_image = product.featured_media | image_url: width: 1024 | prepend: 'https:' -%}
 
           <div class="Product__ShareList" aria-hidden="true">
             <a class="Product__ShareItem" href="https://www.facebook.com/sharer.php?u={{ share_url }}" target="_blank" rel="noopener">{%- render 'icon' with 'facebook' -%} Facebook</a>
@@ -92,13 +92,13 @@
           {%- when 'image' -%}
             <div id="Media{{ media.id }}" tabindex="0" class="Product__SlideItem Product__SlideItem--image Carousel__Cell {% if initial_media_id == media.id %}is-selected{% endif %}" data-media-type="image" data-media-id="{{ media.id }}" data-media-position="{{ media.position }}" data-image-media-position="{% increment image_position %}">
               <div class="AspectRatio AspectRatio--withFallback" style="padding-bottom: {{ 100.0 | divided_by: media.aspect_ratio }}%; --aspect-ratio: {{ media.aspect_ratio }};">
-                {% assign image_url = media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+                {% assign image_url = media | image_url: width: 1, height: 1 | replace: '_1x1.', '_{width}x.' %}
 
-                <img class="Image--lazyLoad Image--fadeIn" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" data-expand="-100" alt="{{ media.alt | escape }}" data-max-width="{{ media.width }}" data-max-height="{{ media.height }}" data-original-src="{{ media | img_url: 'master' }}">
+                <img class="Image--lazyLoad Image--fadeIn" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" data-expand="-100" alt="{{ media.alt | escape }}" data-max-width="{{ media.width }}" data-max-height="{{ media.height }}" data-original-src="{{ media | image_url }}">
                 <span class="Image__Loader"></span>
 
                 <noscript>
-                  <img src="{{ media | img_url: '800x' }}" alt="{{ media.alt | escape }}">
+                  <img src="{{ media | image_url: width: 800 }}" alt="{{ media.alt | escape }}">
                 </noscript>
               </div>
             </div>
@@ -165,12 +165,12 @@
 
                     {%- if section.settings.stack_images -%}
                       <a href="#Media{{ media.id }}" data-offset="-25" data-focus-on-click data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if forloop.first %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
-                        <img src="{{ media | img_url: '160x' }}" alt="{{ media.alt | escape }}">
+                        <img src="{{ media | image_url: width: 160 }}" alt="{{ media.alt | escape }}">
                         {{- nav_item_badge -}}
                       </a>
                     {%- else -%}
-                      <a href="{{ media | img_url: '1024x' }}" data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
-                        <img src="{{ media | img_url: '160x' }}" alt="{{ media.alt | escape }}">
+                      <a href="{{ media | image_url: width: 1024 }}" data-media-id="{{ media.id }}" class="Product__SlideshowNavImage AspectRatio {% if media.id == initial_media_id %}is-selected{% endif %}" style="--aspect-ratio: {{ media.preview_image.aspect_ratio }}">
+                        <img src="{{ media | image_url: width: 160 }}" alt="{{ media.alt | escape }}">
                         {{- nav_item_badge -}}
                       </a>
                     {%- endif -%}
@@ -313,7 +313,7 @@
                     {%- assign share_url = shop.url | append: product.url -%}
                     {%- assign twitter_text = product.title -%}
                     {%- assign pinterest_description = product.description | strip_html | truncatewords: 15 | url_param_escape -%}
-                    {%- assign pinterest_image = product.featured_image | img_url: 'large' | prepend: 'https:' -%}
+                    {%- assign pinterest_image = product.featured_image | image_url | prepend: 'https:' -%}
 
                     <div class="ProductMeta__ShareList Text--subdued">
                       <a class="ProductMeta__ShareItem" href="https://www.facebook.com/sharer.php?u={{ share_url }}" target="_blank" rel="noopener" aria-label="Facebook">{%- render 'icon' with 'facebook' -%}</a>
@@ -333,7 +333,7 @@
                     {%- endif -%}
 
                     <div class="QuantitySelector QuantitySelector--large">
-                      {%- assign quantity_minus_one = line_item.quantity | minus: 1 -%}
+                      
 
                       <button type="button" class="QuantitySelector__Button Link Link--secondary" data-action="decrease-quantity">{% render 'icon' with 'minus' %}</button>
                       <input type="text" class="QuantitySelector__CurrentQuantity" pattern="[0-9]*" name="quantity" value="1" aria-label="{{ 'product.form.quantity' | t }}">
@@ -752,11 +752,11 @@ This is the root container for the zoom functionality. Must not be removed, as o
       "type": "icons",
       "limit": 1,
       "settings": [
-   {
-      "type": "text",
-      "id": "title",
-      "label": "Heading"
-    }
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        }
       ]
     },
     {
@@ -838,4 +838,4 @@ This is the root container for the zoom functionality. Must not be removed, as o
   ]
 }
 {% endschema %}
-    <div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}"></div>
+    <div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" | replace: '?', '%3F' | replace: '&', '%26' }}" data-description="{{ product.description | escape }}"></div>
