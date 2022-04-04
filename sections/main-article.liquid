@@ -94,7 +94,7 @@
 
               <div class="Panel__Content">
               
-                <div class="ProductList ProductList--shopNow" data-desktop-count="{% if section.blocks.size > 0 %}2{% else %}3{% endif %}" data-flickity-config='{{ flickity_config }}'>
+                <div class="ProductList ProductList--shopNow" data-desktop-count="2" data-flickity-config='{{ flickity_config }}'>
                   {%- if collection != blank -%}
                     {%- for product in collection.products limit: section.settings.grid_items_count -%}
                       <div class="Carousel__Cell">
