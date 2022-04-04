@@ -81,7 +81,11 @@
         {% for c in collections %}
         <p>{{c.title }}</p>
 
-        
+        {% case c.id %}
+        {% when '273396269227'%}
+
+        {% assign collection = c %}
+        {% endcase %}
         {% endfor %}
         
         <div class="Container Container--narrow">
