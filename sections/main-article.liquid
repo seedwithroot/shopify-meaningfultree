@@ -75,6 +75,7 @@
       <div class="Article__Body Rte">
 
         {% assign splitContent = article.content | split:'<!--P-->' %}
+        <p>Add Content Begin</p>
         {% for contentPart in splitContent %}
         {{contentPart}}
         {% for c in collections %}
