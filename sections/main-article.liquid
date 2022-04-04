@@ -112,7 +112,7 @@
             </div>
           {%- endcapture -%}
 
-          {%- if section.blocks.size > 0 -%}
+         
             <div class="ShopNowGrid Grid Grid--m">
               <div class="Grid__Cell 2/3--lap-and-up">
                 {{ product_panel }}
@@ -120,21 +120,15 @@
 
               <div class="Grid__Cell 1/3--lap-and-up">
                 <div class="FeaturedQuote">
-                  {%- if section.blocks.first.settings.content != blank -%}
+                 
                     <div class="FeaturedQuote__Content">
-                      {{ section.blocks.first.settings.content }}
+                      Buy It
                     </div>
-                  {%- endif -%}
-
-                  {%- if section.blocks.first.settings.author != blank -%}
-                    <p class="FeaturedQuote__Author">{{ section.blocks.first.settings.author }}</p>
-                  {%- endif -%}
+                  
                 </div>
               </div>
             </div>
-          {%- else -%}
-            {{ product_panel }}
-          {%- endif -%}
+         
         </div>
         {% endfor %}
 
