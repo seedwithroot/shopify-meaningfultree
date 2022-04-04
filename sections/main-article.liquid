@@ -76,17 +76,19 @@
         {% for c in collections.all.products %}
         {% case p.id %}
         {% when 6978645885099 %}
+        {% assign product=p %}
 
-        
+
         {% endcase %}
-        {% endfor %}
 
+        {% endfor %}
+        {% }
         {% assign splitContent = article.content | split: '<!--P-->' %}
         {% for contentPart in splitContent %}
           {{ contentPart }}
 
 
-          {% render 'product-insert', use_horizontal: true, product=p %}
+          {% render 'product-insert', use_horizontal: true, product=product %}
 
         {% endfor %}
 
