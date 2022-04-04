@@ -95,7 +95,7 @@
               
                 <div class="ProductList ProductList--shopNow" data-desktop-count="2" data-flickity-config='{{ flickity_config }}'>
                   {%- if collection != blank -%}
-                    {%- for product in collection.products limit: section.settings.grid_items_count -%}
+                    {%- for product in collection.products limit: 4 -%}
                       <div class="Carousel__Cell">
                         {%- render 'product-item', product: product, show_product_info: true, show_vendor: false, show_color_swatch: false, show_labels: false -%}
                       </div>
@@ -122,7 +122,7 @@
                 <div class="FeaturedQuote">
                  
                     <div class="FeaturedQuote__Content">
-                      Buy It
+                      <p>You can use this element to add a quote, content...</p>
                     </div>
                   
                 </div>
