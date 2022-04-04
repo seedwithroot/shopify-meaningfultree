@@ -77,9 +77,9 @@
         {% assign splitContent = article.content | split:'<!--P-->' %}
         {% for contentPart in splitContent %}
         {{contentPart}}
-        
+
         {% for c in collections %}
-        <p>{{c.title }}</p>
+        <p>{{c.title }},{{c.id}}</p>
 
         {% case c.id %}
         {% when '273396269227'%}
@@ -87,7 +87,7 @@
         {% assign collection = c %}
         {% endcase %}
         {% endfor %}
-        
+
         <div class="Container Container--narrow">
           {%- capture product_panel -%}
             <div class="Panel Panel--flush Panel--withArrows">
