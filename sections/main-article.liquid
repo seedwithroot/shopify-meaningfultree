@@ -75,29 +75,30 @@
       <div class="Article__Body Rte">
 
         {% assign splitContent = article.content | split:'<!--P-->' %}
-        <p>Add Content Begin</p>
         {% for contentPart in splitContent %}
         {{contentPart}}
+        
         {% for c in collections %}
         <p>{{c.title }}</p>
 
-        {%- case c.id -%}
-        {%- when '273396269227' -%}
-
-        {% assign collection = c %}
-        {% endcasae %}
+        
         {% endfor %}
+        
         <div class="Container Container--narrow">
           {%- capture product_panel -%}
             <div class="Panel Panel--flush Panel--withArrows">
-                <div class="Panel__Content">
+              {%- if section.settings.title != blank -%}
+                <h2 class="Panel__Title Heading u-h2">{{ section.settings.title | escape }}</h2>
+              {%- endif -%}
 
+              <div class="Panel__Content">
+                {%- assign collection = section.settings.collection -%}
 
-                <div class="ProductList ProductList--shopNow" data-desktop-count="2" data-flickity-config='{{ flickity_config }}'>
+                <div class="ProductList ProductList--shopNow" data-desktop-count="{% if section.blocks.size > 0 %}2{% else %}3{% endif %}" data-flickity-config='{{ flickity_config }}'>
                   {%- if collection != blank -%}
-                    {%- for product in collection.products limit: 1 -%}
+                    {%- for product in collection.products limit: section.settings.grid_items_count -%}
                       <div class="Carousel__Cell">
-                        {%- render 'product-item', product: product, show_product_info: true, show_vendor: false, show_color_swatch: false, show_labels: false -%}
+                        {%- render 'product-item', product: product, show_product_info: section.settings.show_product_info, show_vendor: section.settings.show_vendor, show_color_swatch: section.settings.show_color_swatch, show_labels: false -%}
                       </div>
                     {%- endfor -%}
                   {%- else -%}
@@ -112,24 +113,29 @@
             </div>
           {%- endcapture -%}
 
+          {%- if section.blocks.size > 0 -%}
+            <div class="ShopNowGrid Grid Grid--m">
+              <div class="Grid__Cell 2/3--lap-and-up">
+                {{ product_panel }}
+              </div>
 
-          <div class="ShopNowGrid Grid Grid--m">
-            <div class="Grid__Cell 2/3--lap-and-up">
-              {{ product_panel }}
-            </div>
+              <div class="Grid__Cell 1/3--lap-and-up">
+                <div class="FeaturedQuote">
+                  {%- if section.blocks.first.settings.content != blank -%}
+                    <div class="FeaturedQuote__Content">
+                      {{ section.blocks.first.settings.content }}
+                    </div>
+                  {%- endif -%}
 
-            <div class="Grid__Cell 1/3--lap-and-up">
-              <div class="FeaturedQuote">
-
-                  <div class="FeaturedQuote__Content">
-                    Featured Quote
-                  </div>
-
-
+                  {%- if section.blocks.first.settings.author != blank -%}
+                    <p class="FeaturedQuote__Author">{{ section.blocks.first.settings.author }}</p>
+                  {%- endif -%}
+                </div>
               </div>
             </div>
-          </div>
-
+          {%- else -%}
+            {{ product_panel }}
+          {%- endif -%}
         </div>
         {% endfor %}
 
