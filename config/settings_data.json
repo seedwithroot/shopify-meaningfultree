@@ -41,9 +41,9 @@
     "cart_show_free_shipping_threshold": false,
     "cart_free_shipping_threshold": "50",
     "social_facebook": "",
-    "social_instagram": "https://instagram.com/themeaningfultree",
-    "favicon": "shopify://shop_images/Dog_Icon_1.png",
-    "checkout_logo_image": "shopify://shop_images/Logotype_1_RGB.png",
+    "social_instagram": "https:\/\/instagram.com\/themeaningfultree",
+    "favicon": "shopify:\/\/shop_images\/Dog_Icon_1.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Logotype_1_RGB.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "medium",
     "checkout_body_background_color": "#fff",
@@ -68,14 +68,14 @@
           "background": "#cddb00",
           "text_color": "#303030",
           "content": "Buy two or more and get free shipping",
-          "link": "shopify://collections/all"
+          "link": "shopify:\/\/collections\/all"
         }
       },
       "header": {
         "type": "header",
         "settings": {
           "use_sticky_header": true,
-          "logo": "shopify://shop_images/Logotype_1_RGB.png",
+          "logo": "shopify:\/\/shop_images\/Logotype_1_RGB.png",
           "logo_max_width": 140,
           "mobile_logo_max_width": 90,
           "show_currency_selector": true,
@@ -96,7 +96,7 @@
             "type": "text",
             "settings": {
               "title": "MEANINGFUL TREE",
-              "content": "<p>Super Pet Health harnesses the healing properties of the olive tree and combines them with an effective pre-biotic in the form of natural Acacia fiber. We are a simple, natural, fully traceable product that supports your pets health in a meaningful way.</p>",
+              "content": "<p>Super Pet Health harnesses the healing properties of the olive tree and combines them with an effective pre-biotic in the form of natural Acacia fiber. We are a simple, natural, fully traceable product that supports your pets health in a meaningful way.<\/p>",
               "show_social_media": true
             }
           },
@@ -104,7 +104,7 @@
             "type": "newsletter",
             "settings": {
               "title": "WOOF!",
-              "content": "<p>Subscribe to receive news, tips and meaningful pet health<em>.</em></p>"
+              "content": "<p>Subscribe to receive news, tips and meaningful pet health<em>.<\/em><\/p>"
             }
           },
           "009ed92f-2ef8-480e-a729-0df5093a31ca": {
@@ -140,7 +140,7 @@
           "show_only_for_visitors": true,
           "show_only_once": true,
           "title": "HI, SUPER PET PARENT!",
-          "content": "<p>Subscribe to receive news, tips and </p><p><em>meaningful pet health.</em></p>",
+          "content": "<p>Subscribe to receive news, tips and <\/p><p><em>meaningful pet health.<\/em><\/p>",
           "show_newsletter": true,
           "apparition_delay": 3
         }
@@ -231,7 +231,7 @@
               "type": "text",
               "settings": {
                 "title": "About the shop",
-                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.</p>",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
                 "show_social_media": true
               }
             },
@@ -245,7 +245,7 @@
               "type": "newsletter",
               "settings": {
                 "title": "Newsletter",
-                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.</p>"
+                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
               }
             }
           },
@@ -340,7 +340,7 @@
               "type": "text",
               "settings": {
                 "title": "About the shop",
-                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.</p>",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
                 "show_social_media": true
               }
             },
@@ -354,7 +354,7 @@
               "type": "newsletter",
               "settings": {
                 "title": "Newsletter",
-                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.</p>"
+                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
               }
             }
           },
@@ -450,7 +450,7 @@
               "type": "text",
               "settings": {
                 "title": "About the shop",
-                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.</p>",
+                "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme settings.<\/p>",
                 "show_social_media": true
               }
             },
@@ -464,7 +464,7 @@
               "type": "newsletter",
               "settings": {
                 "title": "Newsletter",
-                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.</p>"
+                "content": "<p>Subscribe to receive updates, access to exclusive deals, and more.<\/p>"
               }
             }
           },

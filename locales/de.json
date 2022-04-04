@@ -198,8 +198,8 @@
       "back_to_account": "Zurück zum Account",
       "cancelled_at": "Bestellung am {{ date }} storniert",
       "placed_at": "Bestellung am {{ date }} getätigt",
-      "fulfillment_html": "Deine Bestellung wurde versandt. Den Versand kannst du anhand der Nummer {{tracking_number}} oder über den folgenden Link verfolgen: <a href=\"{{tracking_url}}\" class=\"Link Link--underlineNative\" target=\"_blank\">{{tracking_url}}</a>",
-      "line_fulfillment_html": "Dein Produkt wurde versandt. Den Versand kannst du anhand der Nummer {{tracking_number}} oder über den folgenden Link verfolgen: <a href=\"{{tracking_url}}\" class=\"Link Link--underlineNative\" target=\"_blank\">{{tracking_url}}</a>",
+      "fulfillment_html": "Deine Bestellung wurde versandt. Den Versand kannst du anhand der Nummer {{tracking_number}} oder über den folgenden Link verfolgen: <a href=\"{{tracking_url}}\" class=\"Link Link--underlineNative\" target=\"_blank\">{{tracking_url}}<\/a>",
+      "line_fulfillment_html": "Dein Produkt wurde versandt. Den Versand kannst du anhand der Nummer {{tracking_number}} oder über den folgenden Link verfolgen: <a href=\"{{tracking_url}}\" class=\"Link Link--underlineNative\" target=\"_blank\">{{tracking_url}}<\/a>",
       "product": "Produkt",
       "quantity": "Menge",
       "line_price": "Gesamtpreis",
@@ -306,7 +306,7 @@
     "general": {
       "view_in_space": "In deinem Bereich ansehen",
       "include_taxes": "inkl. MwSt.",
-      "shipping_policy_html": "zzgl. <a href=\"{{ link }}\" class=\"link link--accented\">Versandkosten</a>"
+      "shipping_policy_html": "zzgl. <a href=\"{{ link }}\" class=\"link link--accented\">Versandkosten<\/a>"
     },
     "labels": {
       "on_sale": "Im Angebot",
@@ -354,8 +354,8 @@
       "check_other_stores": "Verfügbarkeit in anderen Shops überprüfen",
       "pick_up_available": "Abholung verfügbar",
       "pick_up_currently_unavailable": "Abholung derzeit nicht verfügbar",
-      "pick_up_available_at_html": "Abholung bei <strong>{{ location_name }}</strong> verfügbar",
-      "pick_up_unavailable_at_html": "Abholung bei <strong>{{ location_name }}</strong> derzeit nicht verfügbar"
+      "pick_up_available_at_html": "Abholung bei <strong>{{ location_name }}<\/strong> verfügbar",
+      "pick_up_unavailable_at_html": "Abholung bei <strong>{{ location_name }}<\/strong> derzeit nicht verfügbar"
     }
   },
   "gift_card": {
@@ -414,7 +414,7 @@
   },
   "date_formats": {
     "month_day_year": "%d %B, %Y",
-    "month_day_year_short": "%d/%m/%Y",
+    "month_day_year_short": "%d\/%m\/%Y",
     "month_day_year_time": "%d %B, %Y um %I:%M%p"
   }
 }

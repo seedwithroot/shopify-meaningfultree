@@ -198,8 +198,8 @@
       "back_to_account": "Retour au compte",
       "cancelled_at": "Commande annulée le {{ date }}",
       "placed_at": "Commande effectuée le {{ date }}",
-      "fulfillment_html": "Votre commande a été expédiée. Suivez le avec le code de suivi {{tracking_number}} ou en cliquant ici : <a href=\"{{tracking_url}}\" class=\"Link Link--underlineNative\" target=\"_blank\">{{tracking_url}}</a>",
-      "line_fulfillment_html": "Votre produit \"{{product_title}}\" a été expédié. Suivez le avec le code de suivi {{tracking_number}} ou en cliquant ici : <a href=\"{{tracking_url}}\" class=\"Link Link--underlineNative\" target=\"_blank\">{{tracking_url}}</a>",
+      "fulfillment_html": "Votre commande a été expédiée. Suivez le avec le code de suivi {{tracking_number}} ou en cliquant ici : <a href=\"{{tracking_url}}\" class=\"Link Link--underlineNative\" target=\"_blank\">{{tracking_url}}<\/a>",
+      "line_fulfillment_html": "Votre produit \"{{product_title}}\" a été expédié. Suivez le avec le code de suivi {{tracking_number}} ou en cliquant ici : <a href=\"{{tracking_url}}\" class=\"Link Link--underlineNative\" target=\"_blank\">{{tracking_url}}<\/a>",
       "product": "Produit",
       "quantity": "Quantité",
       "line_price": "Total",
@@ -306,7 +306,7 @@
     "general": {
       "view_in_space": "Afficher dans votre espace",
       "include_taxes": "Taxes incluses.",
-      "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link link--accented\">Frais de port</a> calculés au paiement."
+      "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link link--accented\">Frais de port<\/a> calculés au paiement."
     },
     "labels": {
       "sold_out": "Rupture",
@@ -354,8 +354,8 @@
       "check_other_stores": "Vérifier la disponibilité dans d'autres boutiques",
       "pick_up_available": "Récupération disponible",
       "pick_up_currently_unavailable": "Récupération actuellement indisponible",
-      "pick_up_available_at_html": "Récupération disponible à <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Récupération actuellement indisponible à <strong>{{ location_name }}</strong>"
+      "pick_up_available_at_html": "Récupération disponible à <strong>{{ location_name }}<\/strong>",
+      "pick_up_unavailable_at_html": "Récupération actuellement indisponible à <strong>{{ location_name }}<\/strong>"
     }
   },
   "gift_card": {
@@ -414,7 +414,7 @@
   },
   "date_formats": {
     "month_day_year": "%d %B %Y",
-    "month_day_year_short": "%d/%B/%Y",
+    "month_day_year_short": "%d\/%B\/%Y",
     "month_day_year_time": "%d %B %Y à %I:%M"
   }
 }
