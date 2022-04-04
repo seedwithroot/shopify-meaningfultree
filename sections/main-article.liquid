@@ -98,7 +98,7 @@
                   {%- if collection != blank -%}
                     {%- for product in collection.products limit: section.settings.grid_items_count -%}
                       <div class="Carousel__Cell">
-                        {%- render 'product-item', product: product, show_product_info: section.settings.show_product_info, show_vendor: section.settings.show_vendor, show_color_swatch: section.settings.show_color_swatch, show_labels: false -%}
+                        {%- render 'product-item', product: product, show_product_info: true, show_vendor: false, show_color_swatch: false, show_labels: false -%}
                       </div>
                     {%- endfor -%}
                   {%- else -%}
