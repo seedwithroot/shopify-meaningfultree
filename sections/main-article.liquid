@@ -77,13 +77,13 @@
         {% assign splitContent = article.content | split:'<!--P-->' %}
         {% for contentPart in splitContent %}
         {{contentPart}}
-        {% for collection in collections.all %}
-        <p>{{collection.name }}</p>
+        {% for c in collections %}
+        <p>{{c.title }} {{ c.id }}</p>
 
-        {%- case collection.id -%}
+        {%- case c.id -%}
         {%- when '273396269227' -%}
 
-        {% assign collection = collection %}
+        {% assign collection = c %}
         {% endcasae %}
         {% endfor %}
         <div class="Container Container--narrow">
