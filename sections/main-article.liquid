@@ -74,7 +74,6 @@
 
       <div class="Article__Body Rte">
         {% for p in collections.all.products %}
-        {{p.id}} {{p.title}}
         {% case p.id %}
         {% when 6978645885099 %}
 
@@ -89,7 +88,7 @@
           {{ contentPart }}
 
 
-          {% render 'product-insert', use_horizontal: true, product=product %}
+          {% render 'product-insert', use_horizontal: true, product: product %}
 
         {% endfor %}
 
