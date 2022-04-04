@@ -79,25 +79,21 @@
         {{contentPart}}
 
         {% for c in collections %}
-        <p>{{c.title }},{{c.id}}</p>
-
         {% case c.id %}
         {% when '273396269227'%}
 
         {% assign collection = c %}
         {% endcase %}
         {% endfor %}
+        {{collection.name}}
 
         <div class="Container Container--narrow">
           {%- capture product_panel -%}
             <div class="Panel Panel--flush Panel--withArrows">
-              {%- if section.settings.title != blank -%}
-                <h2 class="Panel__Title Heading u-h2">{{ section.settings.title | escape }}</h2>
-              {%- endif -%}
+            
 
               <div class="Panel__Content">
-                {%- assign collection = section.settings.collection -%}
-
+              
                 <div class="ProductList ProductList--shopNow" data-desktop-count="{% if section.blocks.size > 0 %}2{% else %}3{% endif %}" data-flickity-config='{{ flickity_config }}'>
                   {%- if collection != blank -%}
                     {%- for product in collection.products limit: section.settings.grid_items_count -%}
