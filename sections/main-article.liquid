@@ -77,7 +77,8 @@
         {% assign splitContent = article.content | split:'<!--P-->' %}
         {% for contentPart in splitContent %}
         {{contentPart}}
-        {% for collection in collections %}
+        {% for collection in collections.all %}
+        <p>{{collection.name }}</p>
 
         {%- case collection.id -%}
         {%- when '273396269227' -%}
@@ -93,13 +94,13 @@
               {%- endif -%} -->
 
               <div class="Panel__Content">
-              
+
 
                 <div class="ProductList ProductList--shopNow" data-desktop-count="{% if section.blocks.size > 0 %}2{% else %}3{% endif %}" data-flickity-config='{{ flickity_config }}'>
                   {%- if collection != blank -%}
-                    {%- for product in collection.products limit: section.settings.grid_items_count -%}
+                    {%- for product in collection.products limit: 1 -%}
                       <div class="Carousel__Cell">
-                        {%- render 'product-item', product: product, show_product_info: section.settings.show_product_info, show_vendor: section.settings.show_vendor, show_color_swatch: section.settings.show_color_swatch, show_labels: false -%}
+                        {%- render 'product-item', product: product, show_product_info: true, show_vendor: false, show_color_swatch: false, show_labels: false -%}
                       </div>
                     {%- endfor -%}
                   {%- else -%}
@@ -114,29 +115,24 @@
             </div>
           {%- endcapture -%}
 
-          {%- if section.blocks.size > 0 -%}
-            <div class="ShopNowGrid Grid Grid--m">
-              <div class="Grid__Cell 2/3--lap-and-up">
-                {{ product_panel }}
-              </div>
 
-              <div class="Grid__Cell 1/3--lap-and-up">
-                <div class="FeaturedQuote">
-                  {%- if section.blocks.first.settings.content != blank -%}
-                    <div class="FeaturedQuote__Content">
-                      {{ section.blocks.first.settings.content }}
-                    </div>
-                  {%- endif -%}
+          <div class="ShopNowGrid Grid Grid--m">
+            <div class="Grid__Cell 2/3--lap-and-up">
+              {{ product_panel }}
+            </div>
 
-                  {%- if section.blocks.first.settings.author != blank -%}
-                    <p class="FeaturedQuote__Author">{{ section.blocks.first.settings.author }}</p>
-                  {%- endif -%}
-                </div>
+            <div class="Grid__Cell 1/3--lap-and-up">
+              <div class="FeaturedQuote">
+
+                  <div class="FeaturedQuote__Content">
+                    Featured Quote
+                  </div>
+
+
               </div>
             </div>
-          {%- else -%}
-            {{ product_panel }}
-          {%- endif -%}
+          </div>
+
         </div>
         {% endfor %}
 
