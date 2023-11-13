@@ -6,16 +6,16 @@
         "slide-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Meaningful_Tree-26_2.jpg",
-            "mobile_image": "shopify://shop_images/Mobile_Homepage.jpg",
+            "image": "shopify:\/\/shop_images\/Meaningful_Tree-26_2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Mobile_Homepage.jpg",
             "apply_overlay": false,
             "content_position": "middleCenter",
             "subheading": "",
             "title": "YOUR DOG IS MEANINGFUL",
             "button_1_text": "SHOP NOW",
-            "button_1_link": "shopify://products/super-pet-total-health",
+            "button_1_link": "shopify:\/\/products\/super-pet-total-health",
             "button_2_text": "",
-            "button_2_link": "shopify://collections/all"
+            "button_2_link": "shopify:\/\/collections\/all"
           }
         }
       },
@@ -38,19 +38,19 @@
         "1630380639d3a45c39-0": {
           "type": "testimonial",
           "settings": {
-            "quote": "<p><strong>So easy! At first I was concerned that my dog wouldn’t take to it added to her food, but she loved it. We’ve been using the product for several weeks and her coat is softer and her eyes brighter.</strong></p><p>Vanessa | Verified Buyer</p>"
+            "quote": "<p><strong>So easy! At first I was concerned that my dog wouldn’t take to it added to her food, but she loved it. We’ve been using the product for several weeks and her coat is softer and her eyes brighter.<\/strong><\/p><p>Vanessa | Verified Buyer<\/p>"
           }
         },
         "1630380639d3a45c39-1": {
           "type": "testimonial",
           "settings": {
-            "quote": "<p><strong>I bought this because I figured that if olive oil is good for people it’s a no brainer for my dog. I like the gut health promoted by the prebiotic. Me and my dog Dave are loving it!</strong></p><p>Carmen | Verified Buyer</p>"
+            "quote": "<p><strong>I bought this because I figured that if olive oil is good for people it’s a no brainer for my dog. I like the gut health promoted by the prebiotic. Me and my dog Dave are loving it!<\/strong><\/p><p>Carmen | Verified Buyer<\/p>"
           }
         },
         "1630380639d3a45c39-2": {
           "type": "testimonial",
           "settings": {
-            "quote": "<p><strong>I like that this product is 100% natural and that it is made up of 2 simple ingredients. I’ve been feeding it to my dog for a month now and I swear I see a difference. He often struggled with constipation and things are moving along perfectly now.</strong></p><p>Tyson | Verified Buyer</p>"
+            "quote": "<p><strong>I like that this product is 100% natural and that it is made up of 2 simple ingredients. I’ve been feeding it to my dog for a month now and I swear I see a difference. He often struggled with constipation and things are moving along perfectly now.<\/strong><\/p><p>Tyson | Verified Buyer<\/p>"
           }
         }
       },
@@ -131,48 +131,47 @@
       "settings": {
         "subheading": "Meaningful Health Benefits",
         "title": "",
-        "image": "shopify://shop_images/purebred-jack-russel-terrier-dog-WN4LDS8.jpg",
+        "image": "shopify:\/\/shop_images\/purebred-jack-russel-terrier-dog-WN4LDS8.jpg",
         "image_position": "right",
-        "content": "<p></p><p></p>",
+        "content": "<p><\/p><p><\/p>",
         "link_text": "Learn More",
-        "link_url": "shopify://collections/all"
+        "link_url": "shopify:\/\/collections\/all"
       }
     },
     "1630382267a7c964d2": {
       "type": "timeline",
-      "disabled": true,
       "blocks": {
         "1630382267a7c964d2-0": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/2.png",
+            "image": "shopify:\/\/shop_images\/2.png",
             "apply_overlay": true,
             "title": "SCOOP",
             "subheading": "feeding time",
             "heading": "Scoop and serve",
-            "content": "<p>Sprinkle onto your dog’s food once a day, or mix it in with their favorite snack.</p>"
+            "content": "<p>Sprinkle onto your dog’s food once a day, or mix it in with their favorite snack.<\/p>"
           }
         },
         "1630382267a7c964d2-1": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/1_9489ee81-dd91-412c-afd1-da3d3e7a9014.png",
+            "image": "shopify:\/\/shop_images\/1_9489ee81-dd91-412c-afd1-da3d3e7a9014.png",
             "apply_overlay": true,
             "title": "SAVORY",
             "subheading": "A SAVORY",
             "heading": "POWDER BLEND",
-            "content": "<p>Blended with a subtle EVOO flavor proven to appeal to the fussiest of dogs.</p>"
+            "content": "<p>Blended with a subtle EVOO flavor proven to appeal to the fussiest of dogs.<\/p>"
           }
         },
         "1630382267a7c964d2-2": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/3.png",
+            "image": "shopify:\/\/shop_images\/3.png",
             "apply_overlay": true,
             "title": "SATISFIED",
             "subheading": "OWNER TESTED",
             "heading": "PUPS APPROVED",
-            "content": "<p>When used on a daily basis, improvements should begin to appear within 4-6 weeks.</p>"
+            "content": "<p>When used on a daily basis, improvements should begin to appear within 4-6 weeks.<\/p>"
           }
         }
       },
@@ -181,6 +180,7 @@
         "1630382267a7c964d2-1",
         "1630382267a7c964d2-2"
       ],
+      "disabled": true,
       "settings": {
         "text_color": "#ffffff"
       }
@@ -192,13 +192,13 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "image": "shopify://shop_images/We-are-Dog-Parents.jpg",
+            "image": "shopify:\/\/shop_images\/We-are-Dog-Parents.jpg",
             "image_alignment": "center center",
             "content_position": "bottomLeft",
             "subheading": "We Are",
             "title": "Dog Parents",
             "button_text": "OUR STORY",
-            "button_link": "shopify://pages/our-story",
+            "button_link": "shopify:\/\/pages\/our-story",
             "apply_overlay": true
           }
         },
@@ -206,13 +206,13 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "image": "shopify://shop_images/Meaningful_Tree-7.jpg",
+            "image": "shopify:\/\/shop_images\/Meaningful_Tree-7.jpg",
             "image_alignment": "center center",
             "content_position": "bottomLeft",
             "subheading": "Healing Properties",
             "title": "Of the Olive Tree",
             "button_text": "Our Ingredients",
-            "button_link": "shopify://pages/ingredients",
+            "button_link": "shopify:\/\/pages\/ingredients",
             "apply_overlay": true
           }
         },
@@ -220,13 +220,13 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "image": "shopify://shop_images/Meaningful_Tree-11.jpg",
+            "image": "shopify:\/\/shop_images\/Meaningful_Tree-11.jpg",
             "image_alignment": "center center",
             "content_position": "bottomLeft",
             "subheading": "Give Your Bestie",
             "title": "Something Meaningful",
             "button_text": "View products",
-            "button_link": "shopify://collections/all",
+            "button_link": "shopify:\/\/collections\/all",
             "apply_overlay": true
           }
         }
@@ -251,7 +251,7 @@
         "blog-0": {
           "type": "blog",
           "settings": {
-            "blog": "blog"
+            "blog": "news"
           }
         }
       },
@@ -262,13 +262,12 @@
         "subheading": "GET THE SCOOP",
         "title": "PUP TALK",
         "show_category": true,
-        "button_link": "shopify://blogs/blog/3-reasons-that-every-dog-could-benefit-from-taking-supplements",
+        "button_link": "shopify:\/\/blogs\/news\/3-reasons-that-every-dog-could-benefit-from-taking-supplements",
         "button_text": "View all blogs"
       }
     },
     "1630380614bfb46632": {
       "type": "timeline",
-      "disabled": true,
       "blocks": {
         "1630380614bfb46632-0": {
           "type": "item",
@@ -277,7 +276,7 @@
             "title": "2000",
             "subheading": "Sub-heading",
             "heading": "Heading",
-            "content": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+            "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
           }
         },
         "1630380614bfb46632-1": {
@@ -287,7 +286,7 @@
             "title": "2001",
             "subheading": "Sub-heading",
             "heading": "Heading",
-            "content": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+            "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
           }
         },
         "1630380614bfb46632-2": {
@@ -297,7 +296,7 @@
             "title": "2002",
             "subheading": "Sub-heading",
             "heading": "Heading",
-            "content": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+            "content": "<p>Add your own custom content to give more information about your store, availability details...<\/p>"
           }
         }
       },
@@ -306,6 +305,7 @@
         "1630380614bfb46632-1",
         "1630380614bfb46632-2"
       ],
+      "disabled": true,
       "settings": {
         "text_color": "#ffffff"
       }

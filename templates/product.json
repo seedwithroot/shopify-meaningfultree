@@ -112,7 +112,7 @@
         "16342410832d845f02-0": {
           "type": "blog",
           "settings": {
-            "blog": "blog"
+            "blog": "news"
           }
         }
       },
@@ -123,7 +123,7 @@
         "subheading": "GET THE SCOOP",
         "title": "PUP TALK",
         "show_category": false,
-        "button_link": "shopify://blogs/blog",
+        "button_link": "shopify:\/\/blogs\/news",
         "button_text": "View all articles"
       }
     }

@@ -70,7 +70,6 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
-      "disabled": true,
       "blocks": {
         "efc38ac8-c580-47f6-b70c-2048643c750b": {
           "type": "product",
@@ -82,6 +81,7 @@
       "block_order": [
         "efc38ac8-c580-47f6-b70c-2048643c750b"
       ],
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "show_product_info": true,
@@ -113,7 +113,7 @@
         "16342410832d845f02-0": {
           "type": "blog",
           "settings": {
-            "blog": "blog"
+            "blog": "news"
           }
         }
       },
@@ -124,7 +124,7 @@
         "subheading": "GET THE SCOOP",
         "title": "PUP TALK",
         "show_category": false,
-        "button_link": "shopify://blogs/blog",
+        "button_link": "shopify:\/\/blogs\/news",
         "button_text": "View all articles"
       }
     }
